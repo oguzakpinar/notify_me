@@ -72,10 +72,10 @@ Widget _body(){
 Widget _logo() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 0.0),
-      child: new Hero(
-      tag: 'hero',
-      child: FlutterLogo(size: 100.0)      
-    )
+      child: new Image.asset(
+                  'assets/icon/bell.png',
+                  height: 200,
+                )
     );
   }
 
@@ -121,7 +121,7 @@ Widget _emailInput() {
           child: new RaisedButton(
             elevation: 5.0,
             shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-            color: Colors.blue,
+            color: Colors.red[400],
             child: _formMode == FormMode.LOGIN
                 ? new Text('Login',
                     style: new TextStyle(fontSize: 20.0, color: Colors.white))
